@@ -16,7 +16,7 @@ mineflayer = require('mineflayer')
 print(f'\033[31m1: Fake Player\033[0m')
 print(f'\033[31m2: Attack UDP\033[0m')
 print(f'\033[31m3: Attack TCP SYN\033[0m')
-opcao = int(input(f'\033[31mOptions: \033[0m'))
+option = int(input(f'\033[31mOptions: \033[0m'))
 
 def FakePlayer():
     server = input(f'\033[31mServer:\033[0m ')
@@ -43,7 +43,7 @@ def FakePlayer():
 
             @On(self.bot, "login")
             def login(_):
-                print(f'\033[32m{self.username} conectado!\033[0m')
+                print(f'\033[32m{self.username} connected!\033[0m')
                 threading.Thread(target=self.chat).start()
 
         def chat(self):
@@ -51,9 +51,9 @@ def FakePlayer():
                 msg = random.choice(messages)
                 try:
                     self.bot.chat(msg)
-                    print(f'\033[35m[{self.username}] Enviou: {msg}\033[0m')
+                    print(f'\033[35m[{self.username}] Send: {msg}\033[0m')
                 except Exception as e:
-                    print(f'\033[31m[{self.username}] Erro: {e}\033[0m')
+                    print(f'\033[31m[{self.username}] Error: {e}\033[0m')
                 time.sleep(intervalo)
 
     
@@ -92,11 +92,11 @@ def AttackSYN():
     port = int(input(f'\033[31mPort:\033[0m '))
     attack(server, destiny, port)
 
-if opcao == 1:
+if option == 1:
     FakePlayer()
 
-if opcao == 2:
+if option == 2:
     AttackUDP()
 
-if opcao == 3:
+if option == 3:
     AttackSYN() #Only linux
