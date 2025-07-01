@@ -20,4 +20,4 @@ command to run the script.
 
 ## Organization
 follow our organization:
--[@Stress-Minecraft](https://github.com/Stress-Minecraft)
+[@Stress-Minecraft](https://github.com/Stress-Minecraft)
