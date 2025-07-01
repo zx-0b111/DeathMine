@@ -22,11 +22,11 @@ def FakePlayer():
     server = input(f'\033[31mServer:\033[0m ')
     port = int(input(f'\033[31mPort:\033[0m '))
     quantity = int(input(f'\033[31mQuantity:\033[0m '))
-    intervalo = float(input(f'\033[31minterval between messages (seconds):\033[0m '))
+    interval = float(input(f'\033[31minterval between messages (seconds):\033[0m '))
 
     bots = []
 
-    mensagens = ["/ping", "/info", "/tps", "/list", "/who"]
+    messages = ["/ping", "/info", "/tps", "/list", "/who"]
 
     class Bot:
         def __init__(self, username):
@@ -48,7 +48,7 @@ def FakePlayer():
 
         def chat(self):
             while True:
-                msg = random.choice(mensagens)
+                msg = random.choice(messages)
                 try:
                     self.bot.chat(msg)
                     print(f'\033[35m[{self.username}] Enviou: {msg}\033[0m')
