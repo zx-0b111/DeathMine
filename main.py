@@ -84,6 +84,7 @@ def AttackUDP():
             
         except Exception as e:
                 print(e)
+        continue
              
 
 def AttackSYN():
