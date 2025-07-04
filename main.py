@@ -91,7 +91,7 @@ def AttackSYN():
     origin = input(f'\033[31mServer:\033[0m ')
     server = input(f'\033[31mDestiny:\033[0m ')
     port = int(input(f'\033[31mPort:\033[0m '))
-    attack(server, destiny, port)
+    attack(origin, server, port)
 
 if option == 1:
     FakePlayer()
