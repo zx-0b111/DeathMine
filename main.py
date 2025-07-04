@@ -88,8 +88,8 @@ def AttackUDP():
              
 
 def AttackSYN():
-    server = input(f'\033[31mServer:\033[0m ')
-    destiny = input(f'\033[31mDestiny:\033[0m ')
+    origin = input(f'\033[31mServer:\033[0m ')
+    server = input(f'\033[31mDestiny:\033[0m ')
     port = int(input(f'\033[31mPort:\033[0m '))
     attack(server, destiny, port)
 
